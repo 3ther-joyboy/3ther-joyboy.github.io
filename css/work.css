@@ -1,0 +1,251 @@
+* {
+    transition: 200ms;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection
+{
+    background-color: #ff6000;
+    color: black;
+}
+
+body 
+{
+    background-color: black;
+}
+@media screen and (min-width: 1100px) 
+{
+    .content
+    {
+        min-height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        
+        
+    }
+    
+    .left-hand, .right-hand
+    {
+        font-family:Consolas;
+        white-space: pre;
+        color: #f60;
+        font-size:calc(0.8vh) ;
+        line-height:calc(0.8vh);
+        
+        position: fixed;
+        bottom: 15vh;
+        z-index:-1;
+        
+        animation:
+        float 3s step-end infinite;
+    }
+    @keyframes float
+    {
+        0%     {bottom: 15vh;}
+        10%     {bottom: 16vh;}
+        50%     {bottom: 15vh;}
+        60%     {bottom: 14vh;}
+    }
+    .right-hand
+    {
+        right: 0;
+        animation:
+        float 4s step-end infinite;
+    }
+    
+    
+    
+    .main 
+    {
+        grid-area: 1/3/2/2;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10vh;
+        padding-bottom: 10vh;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;  
+    }
+    
+    p,h1,h2,h3
+    {
+        color: #f60;
+        font-family: Consolas;
+    }
+    
+    h2{text-transform: uppercase;}
+    .main h1
+    {
+        margin: 1vh auto;
+        overflow: hidden;
+        white-space: nowrap;
+        animation:
+            typing 3s steps(40, end),
+            blink-caret 1.5s step-end infinite;
+    }
+    .main .galery,.main .webovky,.main .ball
+    {
+        margin: 3%;
+        border: #f60 solid .3vh;
+    
+    }
+    
+    .main .galery img
+    {
+        max-height: 30vh;
+        min-height: 100px;
+        max-width: 30vh;
+        min-width: 100px;
+        vertical-align: top;
+        background-color: #b93e00;
+    }
+    .main .ball img
+    {
+        vertical-align: top;
+    }
+    .main .ball
+    {
+        border-radius: 50%;
+        background-color: #f60;
+    }
+    .main .webovky img 
+    {
+        max-height: 50vh;
+        max-width: 50vh;
+        vertical-align: top;   
+    }
+    
+    .web-date
+    {
+        writing-mode: vertical-rl;
+    }
+    .segment
+    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;    
+    }
+    
+    .vertical-text
+    {
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+    }    
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret
+{
+    0% {border-right: solid 0.5vh #f60;}    
+    49% {border-right: solid 0.5vh #f60;}
+    50% {border-right: solid 0.5vh rgba(255, 102, 0, 0);}
+}
+@media screen and (max-width: 1100px) 
+{
+    .content
+{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.left-hand, .right-hand
+{
+display: none;
+}
+.main 
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+p,h1,h2,h3
+{
+    color: #f60;
+    font-family: Consolas;
+
+}
+.main h1 
+{
+    margin: 10vh auto 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 3.5vw;
+    animation:
+        typing 3s steps(40, end),
+        blink-caret 1.5s step-end infinite;
+}
+.main .galery,.main .ball
+{
+    margin: 3vh 0;
+    border: #f60 solid .3vh;
+
+}
+
+.main .galery img
+{
+    max-width:500px;
+    width: 80vw;
+    vertical-align: top;
+    background-color: #b93e00;
+}
+.main .ball img
+{
+    vertical-align: top;
+}
+.main .ball
+{
+    border-radius: 50%;
+    background-color: #f60;
+}
+.main .webovky
+{
+    margin: 0;
+    border: #f60 solid .3vh;
+}
+.main .webovky img 
+{
+    max-height: 50vh;
+    max-width: 80vw;
+    vertical-align: top;   
+}
+
+.web-date
+{
+    writing-mode: horizontal-tb;
+    margin: 1px auto 3vh;
+}
+.segment
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.vertical-text
+{
+    text-orientation: upright;
+    writing-mode: horizontal-tb;
+    text-transform: uppercase;
+}
+}
+@media screen and (max-width: 500px) {
+    .main h1 
+    {
+        margin: 30px auto 0 ;
+    }
+}
+
+

@@ -1,0 +1,448 @@
+* {
+    transition: 200ms;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+::selection
+{
+    background-color: #ff6000;
+    color: black;
+}
+
+body
+{
+    background-color: black;
+    background-image: url();
+    background-size: 80%;
+    background-position-x: center;
+    background-position-y: 10vh;
+    background-repeat: no-repeat;
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret
+{
+    0% {border-right: solid 0.5vh #f60;}    
+    49% {border-right: solid 0.5vh #f60;}
+    50% {border-right: solid 0.5vh rgba(255, 102, 0, 0);}
+}
+@media screen and (min-width: 1100px) 
+{
+    body .content
+    {
+        min-height: 100vh;
+        min-height: 700px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100vh 1fr;
+    }
+body .content .background
+{
+    grid-area: 1/3/2/2;
+    color: #ff6000;
+    font-size:0.8vh ;
+    line-height:0.8vh;
+    z-index: 1;
+    
+    font-family:Consolas;
+    white-space: pre;
+    text-align: justify;
+    display: flex;
+    align-items: flex-end;
+}
+body .content .background div span::selection
+{
+    background-color: #00000000;
+    color: #ff62006c;
+}
+body .content .left
+{
+grid-area: 1/2/2/1;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+}
+body .content .right
+{
+grid-area: 1/4/2/3;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+}
+
+
+body .content .text-main h1 
+{
+    font-size: 400%;
+    font-family: sans-serif;
+    width: fit-content;
+    
+    margin: 1vh auto;
+    
+}
+
+body .content .text-main p
+{
+    font-family: sans-serif;
+    font-size: 150%;
+    /*
+    animations
+    */
+    background-color: #88380231;
+    margin: 2vh auto;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 2s steps(20, end),
+        blink-caret 1.5s step-end infinite;
+}
+body .content .text-main
+{
+    aspect-ratio: 5/3;
+    margin: 5% auto; 
+    background-color: #ff64033d;
+    color: #F60;
+    text-align: center;
+    border-left: #F60 solid 5px;
+    padding: 5%;
+    min-height: 150px;
+}
+body .content .ether
+{
+    background-color: #ff64033d;
+    background-image: url(../img/ether_fullbody.png);
+    background-size: cover;
+    background-position-x: 60%;
+    background-position-y: .5vh;
+    color: #F60;
+    border-left: #F60 solid 5px;
+    width: 20vh;
+    min-width: 100px;
+    aspect-ratio: 2/3;
+}
+
+body .content .texts
+{
+    background-color: #ff64033d;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 100%;
+    color: #F60;
+    border-right: #F60 solid 5px;
+    height: 35vh;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+
+    aspect-ratio: 2/3;
+}
+body .content .texts p
+{
+    margin: 10%;
+}
+body .content .inline
+{
+    margin-top: 5vh;
+    background-color: #6d2a00d7;
+    background-image: url(../img/luka\ in\ line\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #F60;
+    border-top: #F60 solid 5px;
+    height: 30%;
+    aspect-ratio: 4/3;
+
+}
+body .content .inline .brusle
+{
+    background-image: url(../img/luka\ in\ line\ orange.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transition: 2s;
+}
+body .content .inline .brusle:hover
+{
+    opacity: 0;
+    transition: 500ms;
+}
+
+/*
+    ABOUT SECTION
+*/
+
+.border-top     {border-top:    #f60 solid 5px;}
+.border-bottom  {border-bottom: #f60 solid 5px;}
+.border-left    {border-left:   #f60 solid 5px;}
+.border-right   {border-right:  #f60 solid 5px;}
+
+.book {aspect-ratio: 1/1.41;}
+
+body .content .about
+{
+    grid-area: 2 / 4 / 3 / 1;
+}
+body .content .about .section
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+body .content .about .section div
+{
+    background-color: #ff64033d;
+    min-width: 10vh;
+    min-height: 300px;
+    min-width: 180px;
+    height: 33vh;
+    margin: 0 4vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+body .content .about .section div img
+{
+    height: 33vh;
+    min-height: 300px;
+    vertical-align: top;
+}
+body .content .about .section div p
+{
+    margin:10px;
+    color: #F60;
+    height: fit-content;
+    max-width: 180px;
+    font-family:sans-serif;
+    text-align: center;
+}
+body .content .about .section div h3
+{
+    margin-top:10px;
+    color: #F60;
+    font-family:sans-serif;
+    text-align: center; 
+}
+}
+@media screen and (max-width: 1100px) {body .content .background{font-size:0.6vw;line-height:0.6vw;}}
+@media screen and (max-width: 1000px) {body .content .background{font-size:0.6vw;line-height:0.6vw;}}
+@media screen and (max-width: 780px) {body .content .background{font-size:0.9vw;line-height:0.8vw;}}
+@media screen and (max-width: 1100px) 
+{
+    body .content
+    {
+        min-height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 100vh 80vh 1fr;
+    }
+    body .content .background
+{
+    grid-area: 1/2/2/1;
+    color: #ff6000;
+
+    
+    font-family:Consolas;
+    white-space: pre-wrap;
+    display: flex;
+    align-items: flex-end;
+}
+body .content .background div span::selection
+{
+    background-color: #00000000;
+    color: #ff62006c;
+}
+body .content .left
+{
+grid-area: 1/2/2/1;
+}
+body .content .right
+{
+grid-area: 2/2/3/1;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+flex-direction: column;
+}
+body .content .text-main h1 
+{
+    font-size: 70px;
+    font-family: sans-serif;
+    width: fit-content;
+    
+    margin: 1vh auto;
+    
+}
+body .content .text-main p
+{
+    font-family: sans-serif;
+    font-size: 22px;
+    width: fit-content;
+    padding: 0;
+    margin: 0 auto;
+    /*
+    animations
+    */
+    background-color: #88380231;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 2s steps(20, end),
+        blink-caret 1.5s step-end infinite;
+}
+body .content .text-main
+{
+    background-color: #ff64033d;
+    color: #F60;
+    text-align: center;
+    border-left: #F60 solid 5px;
+    padding: 5%;
+    min-height: 70px;
+    margin: 5vw;
+    margin-top: 10vh;
+}
+body .content .ether
+{
+display: none;
+}
+
+body .content .texts
+{
+    margin-top: 10vh;
+    background-color: #ff64033d;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 100%;
+    color: #F60;
+    display: flex;
+    align-items: center;
+}
+body .content .texts p
+{
+    margin: 10px;
+}
+body .content .inline
+{
+    margin-top: 2vh;
+    background-color: #6d2a00d7;
+    background-image: url(../img/luka\ in\ line\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #F60;
+    border-top: #F60 solid 5px;
+    max-width: 600px;
+    width: 90vw;
+    aspect-ratio: 4/3;
+
+}
+body .content .inline .brusle
+{
+    background-image: url(../img/luka\ in\ line\ orange.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transition: 2s;
+}
+body .content .inline .brusle:hover
+{
+    opacity: 0;
+    transition: 500ms;
+}
+
+
+/*
+    ABOUT SECTION
+*/
+.border-top     {border-top:    #f60 solid 0px;}
+.border-bottom  {border-bottom: #f60 solid 0px;}
+.border-left    {border-left:   #f60 solid 0px;}
+.border-right   {border-right:  #f60 solid 0px;}
+
+.book {aspect-ratio: 1/1.41;}
+
+body .content .about
+{
+    grid-area: 3 / 2 / 4 / 1;
+}
+body .content .about .section
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body .content .about .section div
+{
+    background-color: #ff64033d;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+body .content .about .section div img 
+{
+    width: 90vw;
+    max-width: 600px;
+    vertical-align: top;
+}
+body .content .about .section div p
+{
+    margin:10px;
+    color: #F60;
+    height: fit-content;
+    font-family:sans-serif;
+    text-align: center;
+}
+body .content .about .section div h3
+{
+    margin-top:10px;
+    color: #F60;
+    font-family:sans-serif;
+    text-align: center; 
+}
+
+.d {display: none;}
+
+body .content .about .bookshelf div img
+{
+    max-width: 300px;
+}
+.book {aspect-ratio: auto;}
+body .content .about .invert
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
+}
+@media screen and (max-width: 500px) 
+{
+    body .content
+    {
+        min-height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 35vh 70vh 1fr;
+    }
+    body .content .background
+{
+display: none;
+}    
+}
