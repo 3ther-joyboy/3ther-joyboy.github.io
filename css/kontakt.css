@@ -32,7 +32,7 @@ body .main
     color: #ff6000;
     font-size: 1vh ;
     line-height: 1vh;
-    font-family:Consolas;
+    font-family:Consolas, monospace;
     white-space: pre;
 }
 .ascii-art span::selection
@@ -115,7 +115,7 @@ body .main
 
 .left .button-container div p , .right .button-container div p
 {
-    font-family:Consolas;
+    font-family:Consolas, monospace;
     color: #f60;
     line-height: 15px;
     margin: 5px;
@@ -182,7 +182,7 @@ body .main
     
     .left .button-container div p , .right .button-container div p
     {
-        font-family:Consolas;
+        font-family:Consolas, monospace;
         color: #f60;
         line-height: 15px;
         margin: 5px;

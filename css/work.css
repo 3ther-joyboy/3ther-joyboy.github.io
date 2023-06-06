@@ -28,7 +28,7 @@ body
     
     .left-hand, .right-hand
     {
-        font-family:Consolas;
+        font-family:Consolas, monospace;
         white-space: pre;
         color: #f60;
         font-size:calc(0.8vh) ;
@@ -74,7 +74,7 @@ body
     p,h1,h2,h3
     {
         color: #f60;
-        font-family: Consolas;
+        font-family: Consolas, monospace;
     }
     
     h2{text-transform: uppercase;}

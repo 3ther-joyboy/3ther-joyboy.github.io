@@ -51,7 +51,7 @@ body .content .background
     line-height:0.8vh;
     z-index: 1;
     
-    font-family:Consolas;
+    font-family:Consolas, monospace;
     white-space: pre;
     text-align: justify;
     display: flex;
@@ -256,7 +256,7 @@ body .content .about .section div h3
     color: #ff6000;
 
     
-    font-family:Consolas;
+    font-family:Consolas, monospace;
     white-space: pre-wrap;
     display: flex;
     align-items: flex-end;
