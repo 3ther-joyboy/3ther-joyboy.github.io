@@ -440,8 +440,8 @@ body .content .about .invert
         display: grid;
         grid-template-rows: 80vh 70vh 1fr;
     }
-    body .content .background
+    body .content .background div
 {
-    letter-spacing: .05vw
+    letter-spacing: -.5px
 }
 }
