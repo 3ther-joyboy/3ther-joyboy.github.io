@@ -42,6 +42,11 @@ footer .text
 {
     width: 30%;
 }
+footer .text::selection
+{
+    background-color: black;
+    color: var(--maincolor);
+}
 footer .nav 
 {
     display: flex;
