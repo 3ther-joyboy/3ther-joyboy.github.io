@@ -1,11 +1,18 @@
 *{scroll-behavior: smooth;}
 
+:root
+{
+    --maincolor: #F50;
+    --maincolorhover: #F60;
+    --background: #ff550046;
+    --alpha0: #00000001;
+}
 /*
     footer
 */
 footer 
 {   
-    background-color: #b93e00;
+    background-color: var(--maincolor);
     height: 30vh;
     min-height: 200px;
     display: flex;
@@ -14,11 +21,7 @@ footer
     transition: 200ms;
     font-family: Consolas, monospace;
 }
-footer:hover 
-{
-    transition: 200ms;
-    background-color: #c94300 ;
-}
+
 footer iframe 
 {
     height: 30vh;
@@ -61,7 +64,7 @@ footer .nav a:hover
 {
     border-right: #000 solid 1vh;
     transition: 200ms;
-    background-color: #F60;
+    background-color: var(--maincolorhover);
     color: black;
 }
 footer img{width: 5vh;}
@@ -70,7 +73,7 @@ footer img{width: 5vh;}
 */
 nav 
 {
-    background-color: #b93e00;
+    background-color: var(--maincolor);
     position: fixed;
     top: 0;
     width: 100%;
@@ -86,7 +89,7 @@ nav
 }
 nav .navigator
 {
-    background-color: #b93e00;
+    background-color: var(--maincolor);
     display: flex;
     align-items: center;
     height: 100%;
@@ -111,7 +114,7 @@ nav .navigator a:hover
 {
     transition: 200ms;
 border-bottom: solid black 1vh;
-background-color: #ff6000;
+background-color: var(--maincolorhover);
 }
 
 @media screen and (max-width: 1100px) 
@@ -121,7 +124,7 @@ background-color: #ff6000;
 */
     footer 
 {   
-    background-color: #b93e00;
+    background-color: var(--maincolor);
     height: 50vh;
     display: flex;
     justify-content: space-between;

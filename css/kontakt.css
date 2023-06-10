@@ -70,7 +70,7 @@ body .main
 .left .button-container, .right .button-container
 {
     height: fit-content;
-    background-color: #ff64033d;
+    background-color: var(--background);
     padding: 5px;
     margin: 5vh;
 
@@ -87,13 +87,13 @@ body .main
 }
 .right .button-container
 {
-    border-left: .5vh solid #f60;
+    border-left: .5vh solid var(--maincolor);
     display: flex;
     flex-direction: row;
 }
 .left .button-container
 {
-    border-right: solid .5vh #f60;
+    border-right: solid .5vh var(--maincolor);
     display: flex;
     flex-direction: row-reverse;
 }
@@ -116,7 +116,7 @@ body .main
 .left .button-container div p , .right .button-container div p
 {
     font-family:Consolas, monospace;
-    color: #f60;
+    color: var(--maincolor);
     line-height: 15px;
     margin: 5px;
     padding: 1px;
@@ -147,7 +147,7 @@ body .main
     .left .button-container, .right .button-container
     {
         height: fit-content;
-        background-color: #ff64033d;
+        background-color: var(--background);
         padding: 5px;
         margin: 2vh auto;
     
@@ -159,7 +159,7 @@ body .main
 
     .right .button-container, .left .button-container
     {
-        border-left: .5vh solid #f60;
+        border-left: .5vh solid var(--maincolor);
         display: flex;
         flex-direction: row;
     }
@@ -183,7 +183,7 @@ body .main
     .left .button-container div p , .right .button-container div p
     {
         font-family:Consolas, monospace;
-        color: #f60;
+        color: var(--maincolor);
         line-height: 15px;
         margin: 5px;
         padding: 1px;
